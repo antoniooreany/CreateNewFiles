@@ -20,13 +20,13 @@ class GroupOfFilesCreator {
                                           int workingDaysPerWeekNumber,
                                           int nonWorkingDaysPerWeekNumber) throws IOException {
         String absoluteFilePath;
-        for (int j = 0; j < weekNumber; j++) {
-            int i;
-            for (i = firstDay; i < firstDay + workingDaysPerWeekNumber; i++) {
-                absoluteFilePath = absoluteFilePathPattern + i + fileNamePattern;
+        for (int weekCounter = 0; weekCounter < weekNumber; weekCounter++) {
+            int dayCounter;
+            for (dayCounter = firstDay; dayCounter < firstDay + workingDaysPerWeekNumber; dayCounter++) {
+                absoluteFilePath = absoluteFilePathPattern + dayCounter + fileNamePattern;
                 FileCreator.createFile(absoluteFilePath);
             }
-            firstDay = i + nonWorkingDaysPerWeekNumber;
+            firstDay = dayCounter + nonWorkingDaysPerWeekNumber;
         }
     }
 }
