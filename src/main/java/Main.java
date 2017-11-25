@@ -5,7 +5,6 @@ import java.io.IOException;
  */
 public class Main {
     /**
-<<<<<<< HEAD
      * @param args parameters:
      *             absoluteFilePathPattern
      *             fileNamePattern
